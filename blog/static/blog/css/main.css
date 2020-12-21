@@ -1,13 +1,15 @@
 @font-face{
-    font-family: 'Tjawal';
-    src: url('../fonts/Tajawal-Regular.ttf') format("truetype")
+    font-family: "Tajawal",sans-serif;
+    src: url('/blog/static/blog/fonts/Tajawal-Regular.ttf') format("truetype")
     local("Tajawal");
 
 }
 
-html,body{
+html body{
     direction: rtl;
     text-align: right;
+    
+    
 }
 
 body{
@@ -16,3 +18,19 @@ body{
 .dropdown-menu .dropdown-item{
     text-align: right;
 }
+.bg-secondary{
+    background-color: #666 !important;
+
+}
+
+.bg-light{
+    background-color: #ccc !important;
+}
+
+/* start post contrnt*/
+.post{
+
+    border: 1px solid #ccc;
+}
+
+/* end post contrnt*/
