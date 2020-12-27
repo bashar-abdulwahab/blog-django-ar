@@ -14,11 +14,21 @@ class post(models.Model):
 
     def __str__(self):
         return self.title
+
     class Meta:
         ordering = ('-post_date',)
 
 
+class comment(models.Model):
+    name = models.CharField(max_length=50, verbose_name='الاسم')
+    email = models.EmailField(verbose_name='البريد الالكتروني')
+    text = models.TextField(verbose_name='التعليق')
+    comment_date = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+    post = models.ForeignKey(post, on_delete=models.CASCADE, related_name='comments')
 
-
-
-
+    def __str__(self):
+        return f"علق {self.name} على {self.post}"
+    
+    class Meta:
+        ordering = ('-comment_date',)

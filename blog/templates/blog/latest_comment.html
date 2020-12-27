@@ -1,0 +1,11 @@
+<ul class="list-group-flush" style="padding: 0; margin-bottom: 0 ;">
+    {% for comment in Comments %}
+    <a class="text-dark" style="text-decoration: none;" href="{% url 'details' comment.post.pk %}">
+       <h4> 
+           <li class="list-group-item " style="padding: 5px 5px; border: none;border-bottom: 1px solid #ccc;" >{{comment.text}}</li>
+       </h4>
+    </a>
+    {% empty %}
+    <li  class="list-group-item ">لا يوجد تعليقات.</li>
+    {% endfor %}
+</ul>

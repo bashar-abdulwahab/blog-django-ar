@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import post
+from .models import post,comment
 """
 {
      python manage.py createsuperuser
@@ -9,3 +9,4 @@ from .models import post
 # Register your models here.
 
 admin.site.register(post)
+admin.site.register(comment)

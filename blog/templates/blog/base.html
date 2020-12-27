@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {% if title %}
+    
     <title>مدونة | {{title}}</title>
     {% else %}
     <title>مدونة </title>
@@ -25,7 +26,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home'%}">
                     <img src="{% static 'blog/images/logo_1.jfif' %}" alt="شعار مدونه", style="width: 30px;">
                     مدونة</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,20 +73,13 @@
                     {% endblock %}        
                 </div> 
                
-                <div class="col-md 4 " ">
-                    <div class="card mb-3 ">
+                <div class="col-md 4 ">
+                    <div class="card mb-3 " style="padding: 0;">
                         <h3 class="text-center bg-secondary text-light  p-2 ">آخر التدوينات<h3></h3>
                             {% include 'blog/lastest_post.html' %}
                     <div class="card mb-3 ">
                         <h3 class="text-center bg-secondary text-light text- p-2">آخر التعليقات<h3>
-                        <ul>
-                            <li><a class="text-dark" style="text-decoration: none;" href="#">التعليقات الاولى</a></li>
-                            <li><a class="text-dark" style="text-decoration: none;"href="#">التعليقات الثانية</a></li>
-                            <li><a class="text-dark" style="text-decoration: none;" href="#">التعليقات الثالثة</a></li>
-                            <li><a class="text-dark" style="text-decoration: none;" href="#">التعليقات الرابعه</a></li>
-                            <li><a class="text-dark" style="text-decoration: none;" href="#">التعليقات الخامسة</a></li>
-                        </ul>
-                    </div>
+                            {% include 'blog/latest_comment.html' %}
                 </div>
                 
             </div>

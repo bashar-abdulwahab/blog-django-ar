@@ -32,5 +32,9 @@ body{
 
     border: 1px solid #ccc;
 }
+.comment{
+    background-color: #f8f8f8;
+    border: 1px #ccc;
+}
 
 /* end post contrnt*/
