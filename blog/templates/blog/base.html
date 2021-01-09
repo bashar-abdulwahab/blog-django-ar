@@ -1,4 +1,5 @@
 {% load static %}
+{% load post_tag %}
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -56,7 +57,7 @@
                     </ul>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#">تسجيل دخول</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="#">دخول</a></li>
+                        <li class="nav-item"><a class="nav-link"  href="{% url 'register'  %}">تسجيل</a></li>
                     </ul>
               </div>
             </div>
@@ -76,10 +77,10 @@
                 <div class="col-md 4 ">
                     <div class="card mb-3 " style="padding: 0;">
                         <h3 class="text-center bg-secondary text-light  p-2 ">آخر التدوينات<h3></h3>
-                            {% include 'blog/lastest_post.html' %}
+                            {% lastest_posts %}
                     <div class="card mb-3 ">
                         <h3 class="text-center bg-secondary text-light text- p-2">آخر التعليقات<h3>
-                            {% include 'blog/latest_comment.html' %}
+                            {% latest_comments %}
                 </div>
                 
             </div>
